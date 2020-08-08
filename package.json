@@ -3,7 +3,7 @@
   "realname": "layer",
   "version": "3.1.1",
   "mobile": "2.0.0",
-  "description": "Web弹层组件",
+  "description": "Web弹层组件修改版",
   "main": "src/layer.js",
   "license": "MIT",
   "scripts": {
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "https",
-    "url": "git+https://github.com/sentsin/layer.git"
+    "url": "git+https://github.com/JettyJiang/layer.git"
   },
-  "author": "贤心",
-  "homepage": "http://layer.layui.com/",
+  "author": "Jetty",
+  "homepage": "https://github.com/JettyJiang/layer",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-minify-css": "^1.2.4",
@@ -29,7 +29,10 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jsdom": "^16.3.0"
+  },
   "keywords": [
     "layer",
     "dialog",

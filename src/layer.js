@@ -1,14 +1,23 @@
 /**
-
- @Name：layer v3.1.1 Web弹层组件
- @Author：贤心
- @Site：http://layer.layui.com
- @License：MIT
-    
+ * fork from http://layer.layui.com
+ * layer的修改版
+ * 添加了iframe的webrtc支持
+ * 添加了jquery
+ * @Author：Jetty
+ * @License：LGPL
  */
 
 ;!function(window, undefined){
 "use strict";
+
+require("jsdom").env("", function(err, window) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  var $ = require("jquery")(window);
+});
 
 var isLayui = window.layui && layui.define, $, win, ready = {
   getPath: function(){
@@ -288,7 +297,7 @@ Class.pt.creat = function(){
     break;
     case 2:
       var content = config.content = conType ? config.content : [config.content||'http://layer.layui.com', 'auto'];
-      config.content = '<iframe scrolling="'+ (config.content[1]||'auto') +'" allowtransparency="true" id="'+ doms[4] +''+ times +'" name="'+ doms[4] +''+ times +'" onload="this.className=\'\';" class="layui-layer-load" frameborder="0" src="' + config.content[0] + '"></iframe>';
+      config.content = '<iframe allow="camera; microphone" scrolling="'+ (config.content[1]||'auto') +'" allowtransparency="true" id="'+ doms[4] +''+ times +'" name="'+ doms[4] +''+ times +'" onload="this.className=\'\';" class="layui-layer-load" frameborder="0" src="' + config.content[0] + '"></iframe>';
     break;
     case 3:
       delete config.title;
