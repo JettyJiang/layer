@@ -1,44 +1,31 @@
 {
   "name": "layui-layer",
-  "realname": "layer",
-  "version": "3.1.1",
-  "mobile": "2.0.0",
-  "description": "Web弹层组件修改版",
-  "main": "src/layer.js",
-  "license": "MIT",
+  "version": "1.0.9",
+  "description": "npm version of layui-layer",
+  "main": "layer.js",
   "scripts": {
-    "run": "gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "https",
-    "url": "git+https://github.com/JettyJiang/layer.git"
-  },
-  "author": "Jetty",
-  "homepage": "https://github.com/JettyJiang/layer",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-uglify": "^1.5.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-header": "^1.8.8",
-    "del": "^2.2.2"
-  },
-  "bugs": {
-    "url": "https://github.com/sentsin/layer/issues"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "jquery": "^3.5.1",
-    "jsdom": "^16.3.0"
+    "type": "git",
+    "url": "https://github.com/sentsin/layui/"
   },
   "keywords": [
     "layer",
+    "layui",
     "dialog",
-    "tips",
-    "alert",
-    "confirm",
-    "window"
-  ]
+    "prompt"
+  ],
+  "author": "sentsin",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }
