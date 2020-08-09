@@ -10,15 +10,6 @@ require('./layer.css');
 
 "use strict";
 
-require("jsdom").env("", function(err, window) {
-    if (err) {
-        console.error(err);
-        return;
-    }
-
-    var $ = require("jquery")(window);
-});
-
 var isLayui = window.layui && layui.define, $, win, ready = {
     getPath: function(){
         var js = document.scripts, script = js[js.length - 1], jsPath = script.src;
